@@ -43,7 +43,6 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         const selectedBreed = item.value
-        console.log(data.message[selectedBreed])
         data.message[selectedBreed].forEach((n, i) => {
           const val = {}
           val.value = n
@@ -72,7 +71,6 @@ function App() {
       )
         .then((res) => res.json())
         .then((data) => {
-          console.log(data)
           setImages(data.message)
         });
     } else {
@@ -81,7 +79,6 @@ function App() {
       )
         .then((res) => res.json())
         .then((data) => {
-          console.log(data.message)
           setImages(data.message)
         });
     }
